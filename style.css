@@ -74,6 +74,8 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 10px;
+    align-items: center;
+    justify-items: center;
 }
 
 header + h2 {
@@ -133,12 +135,46 @@ main section p {
     font-size: 1.1rem;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: cadetblue;
+    color: black;
+}
+
+footer .contact-info h3 {
+    font-size: 1.5rem;
+}
+
+footer .contact-info p {
+    font-size: 1rem;
+    margin-block: 0.5rem;
+}
+
+footer .contact-img img {
+    max-width: 300px;
+}
+
 
 
 /* mobile size */
 @media (max-width: 500px) {
     .pfp {
         max-width: 250px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 1rem;
+    }
+
+    footer .contact-img img{
+        max-width: 200px;
     }
 }
 
